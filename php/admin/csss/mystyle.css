@@ -1,0 +1,38 @@
+input[type="search"] {
+	border: solid #337ab7;
+    border-radius: 3px;
+}
+.status{
+    padding: 8px 11px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.white {
+	color:white;
+}
+.bg-green{
+    background: #008000ab;
+}
+.bg-blue{
+    background:#0000ffa8;
+}
+.bg-red{
+    background: #ff0000ab	;
+}
+td {
+        text-align: center;
+}
+th {
+        text-align: center;
+}
+.rad{
+	width: 14px;
+    display: inline-block;
+    height: 15px;
+    margin-left: 30px!important;
+}
+.info{
+	position: absolute;
+    right: 10%;
+    top: 30%;
+}

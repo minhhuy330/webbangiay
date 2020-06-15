@@ -1,0 +1,31 @@
+<?php
+									include("ketnoidb.php");
+									$sql="SELECT * FROM sanpham,loaisp where sanpham.maloai=loaisp.MaLoai";
+									$result=$conn->query($sql);
+									if($result->num_rows >0){
+										//fetch_assoc là lấy dữ liêu trả về 1 mảng associate có key, value
+										while($rows = $result ->fetch_assoc()){
+									?>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="single-category-2 media align-items-center">
+                                                <div class="media-image mr-xl-3">
+                                                    <a href="#"><img src="images/product/<?=$rows["hinhanh"]?>" alt="Category Image"></a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h2><a href="#"><?=$rows["TenLoai"]?></a></h2>
+                                                    <ul class="sub-featured-categories list-unstyled">
+                                                        <li><a href="#">Digital Cameras</a></li>
+                                                        <li><a href="#">DSLR Cameras</a></li>
+                                                        <li><a href="#">Lighting &amp; Studio</a></li>
+                                                    </ul>
+                                                    <a href="#" class="view-more">See More</a>
+                                                </div>
+                                            </div> <!-- end of single-category -->
+                                            
+                                        </div> <!-- end of swiper-slide -->
+                                    </div> <!-- end of swiper-wrapper -->
+									<?php
+										}
+									}
+									?>
